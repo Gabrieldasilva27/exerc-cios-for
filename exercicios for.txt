@@ -1,0 +1,131 @@
+Exercicios for
+Faça um programa que leia 5 números e informe o maior número.
+
+maior_numero = float('-inf')
+for i in range(5):
+ numero = float(input(f"Digite o {i+1}o numero: "))
+if numero > maior_numero:
+ maior_numero = numero
+print(f"O maior numero digitado é: {maior_numero}")
+
+Faça um programa que verifique e mostre os números entre 1.000 e 2.000 (inclusive) que, quando divididos por 11 produzam resto igual a 2.
+
+for numero in range(1000, 2001):
+ if numero % 11 == 2:
+  print(numero)
+
+Faça um programa que leia 5 números e informe a soma e a média dos números.
+
+soma = 0
+for i in range(5):
+ numero = float(input(f"Digite o {i+1}o numero: "))
+soma += numero
+media = soma/5
+print(f"A soma dos numeros é: {soma}")
+print(f"A média dos numeros é: {media}")
+
+Faça um programa que receba um número e usando laços de repetição calcule e mostre a tabuada desse número.
+
+numero = int(input("Digite um numero para ver sua tabuada: "))
+print(f"******* Tabuada do numero {numero} ***********")
+for contador in range(1, 11):
+ resultado = numero * contador
+print(f"{numero} X {contador} = {resultado}")
+
+Faça um programa que mostre as tabuadas dos números de 1 a 10 usando laços de repetição.
+
+for i in range(1,11):
+ for j in range(1,11):
+   print(f"{i} X {j} = {i * j}")
+
+Faça um programa que imprima na tela os números de 1 a 20, um abaixo do outro. Depois modifique o programa para que ele mostre os
+números um ao lado do outro.
+
+
+for i in range(1, 21):
+  print(i)
+print(list(range(1,21)))
+
+Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
+
+for i in range(1,51):
+ if i % 2 != 0:
+  print(i)
+for farofa in range(1, 51, 2):
+ print(farofa)
+
+Faça um programa que receba dois números inteiros e gere os números inteiros que estão no intervalo compreendido por eles.
+
+n1 = int(input("Digite um numero: "))
+n2 = int(input("Digite outro numero: "))
+for u in range(n1+1, n2):
+ print(u)
+for i in range(n2 + 1, n1):
+ print(i)
+num1 = int(input("Digite um numero: "))
+num2 = int(input("Digite outro numero: "))
+if num2 > num1:
+ for i in range(num1,num2,1):
+  print(i)
+
+Uma loja deseja cadastrar 5 clientes e verificar se o faturamento da loja foi superior a loja B (faturamento = 54000). Se o faturamento atingir
+esse valor mostre na tela uma mensagem contendo em quanto foi superado do faturamento.
+
+
+faturamento_loja_b = 54000
+faturamento_total = 0
+for i in range(5):
+    faturamento_cliente = float(input(f"Digite o faturamento do cliente {i+1}: "))
+    faturamento_total += faturamento_cliente
+if faturamento_total > faturamento_loja_b:
+    diferenca = faturamento_total - faturamento_loja_b
+    print(f"O faturamento da loja foi superior ao da loja B por {diferenca:.2f} reais.")
+else:
+    print("O faturamento da loja não foi superior ao da loja B.")
+
+Faça um programa que peça 10 números inteiros, calcule e mostre a quantidade de números pares e a quantidade de números impares.
+
+numeros_pares = 0
+numeros_impares = 0
+for i in range(10):
+    numero = int(input(f"Digite o {i+1}º número inteiro: "))
+    if numero % 2 == 0:
+        numeros_pares += 1
+    else:
+        numeros_impares += 1
+print(f"Quantidade de números pares: {numeros_pares}")
+print(f"Quantidade de números ímpares: {numeros_impares}")
+
+Um funcionário de uma empresa recebe aumento salarial anualmente: Sabe-se que: Esse funcionário foi contratado em 1995, com salário
+inicial de R$ 1.000,00; Em 1996 recebeu aumento de 1,5% sobre seu salário inicial; A partir de 1997 (inclusive), os aumentos salariais sempre
+correspondem ao dobro do percentual do ano anterior. Faça um programa que determine o salário atual desse funcionário. Após concluir isto,
+altere o programa permitindo que o usuário digite o salário inicial do funcionário.
+
+
+salario = int(input("Digite o salario inicial do funcionario: "))
+percentual = 0.015
+for i in range(1996, 2025):
+ aumento = salario * percentual
+salario += aumento
+percentual *= 2
+print(f"salario em {i} = {salario:.2f}")
+
+Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o
+usuário informe um valor válido.
+
+
+for i in range(9999):
+ nota = int(input("digite uma nota de 0 a 10"))
+ if nota > 0 and nota < 10:
+  print("nota valida")
+  break
+else:
+ print("nota invalida, digite uma nota de 0 a 10 ")
+
+a = input("digite a letra do seu animal preferido ")
+if a == "C" or a == "c":
+  print("cachorro")
+elif a == "G" or a == "g":
+  print("gato")
+else:
+  print("resposta invalida")
